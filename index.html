@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <div class="container mt-5 pt-2 border w-100 h-100 ">
+    <div class="container mt-5 p-0 border">
         <!-- Header -->
-        <div class="row container border-bottom py-3 bg-light" >
+        <div class="row container ms-0 border-bottom py-3 bg-light">
             <div class="col">
                 <H2>Payment for Example</H2>
             </div>
@@ -26,97 +26,109 @@
                 <h5>Some fields are missing</h5>
             </div>
         </div>
-        <!-- First row of Form-->
-        <div class="row container d-flex justify-content-between align-items-center mt-2">
-            <div class="col-5 ">
-                <label class="mb-2 form-label" for="cardNumber">Card #</label><br>
-                <input class="w-100 mb-2 container border rounded border-secondary-subtle py-1 form-control" type="text"
-                    placeholder="XXXXXXXXXXXXX" id="cardNumber">
-            </div>
-            <div class="col 2">
-                <label class="mb-2 form-label" for="cvcNumber">CVC #</label><br>
-                <input class="w-100 mb-2 form-control container py-1 border rounded border-secondary-subtle" type="text"
-                    placeholder="0000" id="cvcNumber">
-            </div>
-            <div class="col-4 ">
-                <label class="mb-2 form-label" for="amount">Amount </label><br>
-                <input class="w-100 mb-2 form-control container py-1 border rounded border-secondary-subtle" type="text"
-                    placeholder="Amount" id="amount">
-            </div>
-        </div>
+        <form action="#" method="get">
+            <!-- First row of Form-->
+            <div class="row container d-flex justify-content-between align-items-center mt-2">
+                <div class="col-5 ">
+                    <label class="mb-2 form-label" for="cardNumber">Card #</label><br>
+                    <input class="w-100 mb-2 container border rounded border-secondary-subtle py-1 form-control"
+                        type="number" placeholder="XXXXXXXXXX" id="cardNumber" minlength="8" required>
+                
+                </div>
+                <div class="col 2">
+                    <label class="mb-2 form-label" for="cvcNumber">CVC #</label><br>
+                    <input class="w-100 mb-2 form-control container py-1 border rounded border-secondary-subtle"
+                    type="number" placeholder="0000" id="cvcNumber" required>
+                </div>
+                <div class="col-4">
 
-        <!-- Second row of Form -->
-        <div class="row container mt-2">
-            <div class="col-6">
-                <label class="form-label" for="firstName"> First Name</label><br>
-                <input class="w-100 form-control mb-2 container py-1 border rounded border-secondary-subtle" type="text"
-                    id="firstName">
-            </div>
-            <div class="col-6">
-                <label class="form-label" for="lastName"> Last Name</label><br>
-                <input class="w-100 mb-2 form-control container py-1 border rounded border-secondary-subtle" type="text"
-                    id="lastName">
-            </div>
-        </div>
 
-        <!-- Third row of Form-->
-        <div class="row container mt-2">
-            <div class="col-6 ">
-                <label class="form-label" for="city"> City</label><br>
-                <input class="w-100 form-control mb-2 container py-1 border rounded border-secondary-subtle" type="text"
-                    id="city">
-            </div>
-            <div class="col-3">
-                <label class="form-label" for="state"> State</label><br>
-                <select
-                    class="w-100 form-control mb-2 py-1 border rounded border-secondary-subtle bg-light container form-select"
-                    name="state" id="state">
-                    <option value="sc">South Carolina</option>
-                    <option value="tx">Texas</option>
-                    <option value="fl">Florida</option>
-                    <option value="nc">North Carolina</option>
-                    <option value="ky">Kentucky</option>
-                </select>
-            </div>
-            <div class="col-3">
-                <label class="form-label" for="postalCode"> Postal Code</label><br>
-                <input class="w-100 form-control mb-2 container py-1 border rounded border-secondary-subtle" type="text"
-                    id="postalCode">
-            </div>
-        </div>
-
-        <!-- Fourth row of form-->
-        <div class="row container mt-2">
-            <div class="col-6">
-                <label class="form-label" for="payment">We accept: </label><br>
-                <div class="mt-3 form-control d-flex align-items-center rounded py-2 px-2 bg-secondary-subtle "
-                    id="payment">
-                    <input class="me-2" name="payment" type="radio"> <i class="fa-brands fa-cc-mastercard fa-2x me-3"></i>
-                    <input class="me-2" name="payment" type="radio"> <i class="fa-brands fa-cc-visa fa-2x me-3"></i>
-                    <input class="me-2" name="payment" type="radio"> <i class="fa-brands fa-cc-paypal fa-2x me-3"></i>
-                    <input class="me-2" name="payment" type="radio"><i class="fa-solid fa-piggy-bank fa-2x me-3"></i>
+                    <label class="mb-2 form-label" for="amount">Amount </label><br>
+                    <div class="input-group">
+                        <span class="input-group-text border border-0 bg-white mb-2">$</span>
+                        <input class=" mb-2 form-control container py-1 border rounded border-secondary-subtle"
+                            type="number" placeholder="Amount" id="amount" required>
+                    </div>
                 </div>
             </div>
-            <div class="col-6">
-                <label for="message">Message</label><br>
-                <textarea class="w-100 pb-5 mt-2 container form-control h-75" name="message"
-                    id="message"></textarea>
-                <p class="text-body-tertiary ">Add any notes here.</p>
-            </div>
-        </div>
 
-        <!-- Submit -->
-        <div class="row container mt-4 py-2 border bg-light">
-            <div class="col d-flex justify-content-end">
-                <input class="btn btn-secondary btn-lg" type="reset" value="Cancel">
-                <input class="btn btn-primary btn-lg ms-2" type="submit" value="Send">
+            <!-- Second row of Form -->
+            <div class="row container mt-2">
+                <div class="col-6">
+                    <label class="form-label" for="firstName"> First Name</label><br>
+                    <input class="w-100 form-control mb-2 container py-1 border rounded border-secondary-subtle"
+                        type="text" id="firstName" required>
+                </div>
+                <div class="col-6">
+                    <label class="form-label" for="lastName"> Last Name</label><br>
+                    <input class="w-100 mb-2 form-control container py-1 border rounded border-secondary-subtle"
+                        type="text" id="lastName" required>
+                </div>
             </div>
-        </div>
+
+            <!-- Third row of Form-->
+            <div class="row container mt-2">
+                <div class="col-6 ">
+                    <label class="form-label" for="city"> City</label><br>
+                    <input class="w-100 form-control mb-2 container py-1 border rounded border-secondary-subtle"
+                        type="text" id="city" required>
+                </div>
+                <div class="col-3">
+                    <label class="form-label" for="state"> State</label><br>
+                    <select
+                        class="w-100 form-control mb-2 py-1 border rounded border-secondary-subtle bg-light container form-select" 
+                        name="state" id="state" required>
+                        <option value="" disabled selected>Pick a State</option>
+                        <option value="sc">South Carolina</option>
+                        <option value="tx">Texas</option>
+                        <option value="fl">Florida</option>
+                        <option value="nc">North Carolina</option>
+                        <option value="ky">Kentucky</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label class="form-label" for="postalCode"> Postal Code</label><br>
+                    <input class="w-100 form-control mb-2 container py-1 border rounded border-secondary-subtle"
+                        type="number" id="postalCode" required>
+                </div>
+            </div>
+
+            <!-- Fourth row of form-->
+            <div class="row container mt-2">
+                <div class="col-6">
+                    <label class="form-label" for="payment">We accept: </label><br>
+                    <div class="mt-3 d-flex px-2 " id="payment">
+                        <div class="d-inline-flex align-items-center p-2 bg-secondary-subtle">
+                            <input class="me-2" name="payment" type="radio" required> <i
+                                class="fa-brands fa-cc-mastercard fa-2x me-3"></i>
+                            <input class="me-2" name="payment" type="radio" required> <i
+                                class="fa-brands fa-cc-visa fa-2x me-3"></i>
+                            <input class="me-2" name="payment" type="radio" required> <i
+                                class="fa-brands fa-cc-paypal fa-2x me-3"></i>
+                            <input class="me-2" name="payment" type="radio" required><i
+                                class="fa-solid fa-piggy-bank fa-2x me-3"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="message">Message</label><br>
+                    <textarea class="w-100 pb-5 mt-2 container form-control h-75" name="message"
+                        id="message"></textarea>
+                    <p class="text-body-tertiary ">Add any notes here.</p>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="row container ms-0 mt-4 py-2 border bg-light">
+                <div class="col d-flex justify-content-end">
+                    <input class="btn btn-secondary btn-lg" type="reset" value="Cancel">
+                    <input class="btn btn-primary btn-lg ms-2" type="submit" value="Send">
+                </div>
+            </div>
     </div>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
-</body>
-
 </html>
